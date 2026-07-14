@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanser Bakery | Repostería Fina Artesanal en Caracas</title>
+    <!-- Tailwind CSS para diseño moderno y fluido -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons para iconos estéticos -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Fuentes de Google: Playfair Display para títulos y Inter para lectura cómoda -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+<body class="bg-[#FFFDFB] text-[#3A2E2B] selection:bg-[#E07A5F] selection:text-white">
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <nav class="sticky top-0 z-50 bg-[#FFFDFB]/95 backdrop-blur-md border-b border-[#F4EBE1]">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Área del Logotipo y Marca -->
+                <a href="#inicio" class="flex-shrink-0 flex items-center space-x-3 group">
+                    <div class="relative flex items-center justify-center">
+                        <!-- LOGO REAL: Reemplaza "" por la ruta de tu imagen, ej: "img/logo.png" o "logo-Sanser.svg" -->
+                        <img id="logo-real" 
+                             src="https://i.ibb.co/RTTj6rfY/SANSER-BAKERY.png" 
+                             alt="Logo Sanser Bakery" 
+                             onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='flex';"
+                             class="h-12 w-auto object-contain max-w-[120px] transition-transform duration-300 group-hover:scale-105">
+                        </div>
+                                        <span class="text-2xl font-serif font-bold tracking-wide text-[#5C3D2E] block sm:block">
+                        Sanser <span class="text-[#E07A5F]">Bakery</span>
+                    </span>
+					                </a>
+
+                <!-- Links Desktop -->
+                <div class="hidden md:flex space-x-8 items-center font-medium">
+                    <a href="#inicio" class="text-[#5C3D2E] hover:text-[#E07A5F] transition-colors">Inicio</a>
+                    <a href="#proceso" class="text-[#5C3D2E]/80 hover:text-[#E07A5F] transition-colors">Nuestro Sello</a>
+                    <a href="#recomendador" class="text-[#5C3D2E]/80 hover:text-[#E07A5F] transition-colors">Planificador</a>
+                    <a href="#pedido" class="text-[#5C3D2E]/80 hover:text-[#E07A5F] transition-colors">Hacer Pedido</a>
+                    <a href="https://wa.me/584241362106" target="_blank" class="bg-[#E07A5F] text-white px-5 py-2.5 rounded-full shadow-lg shadow-[#E07A5F]/20 hover:bg-[#D0694D] transition-all flex items-center space-x-2">
+                        <i data-lucide="phone-call" class="w-4 h-4"></i>
+                        <span>Contactar</span>
+                    </a>
+                </div>
+				</div>
+                <!-- Botón de menú móvil -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="p-2 text-[#5C3D2E] hover:text-[#E07A5F] focus:outline-none">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Menú Móvil Desplegable -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#FFFDFB] border-b border-[#F4EBE1] px-4 pt-2 pb-4 space-y-2">
+            <a href="#inicio" class="block py-2 text-[#5C3D2E] font-medium">Inicio</a>
+            <a href="#proceso" class="block py-2 text-[#5C3D2E]/80 font-medium">Nuestro Sello</a>
+            <a href="#recomendador" class="block py-2 text-[#5C3D2E]/80 font-medium">Planificador</a>
+            <a href="#pedido" class="block py-2 text-[#5C3D2E]/80 font-medium">Hacer Pedido</a>
+            <a href="https://wa.me/584241362106" target="_blank" class="block w-full text-center bg-[#E07A5F] text-white py-2.5 rounded-xl font-medium">
+                Pedir por WhatsApp
+            </a>
+        </div>
+    </nav>
+
+    <!-- HÉROE PRINCIPAL (HERO SECTION) -->
+    <section id="inicio" class="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-b from-[#FAF3EB] to-[#FFFDFB]">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Texto del Héroe -->
+                <div class="space-y-6 text-center lg:text-left">
+                    <span class="inline-flex items-center space-x-2 bg-[#F4EBE1] text-[#E07A5F] text-xs font-semibold uppercase tracking-widest px-3 py-1.5 rounded-full">
+                        <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+                        <span>Alta Repostería Artesanal</span>
+                    </span>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-[#3D2C24] leading-tight">
+                        El arte de hornear <br>
+                        <span class="text-[#E07A5F] italic">momentos perfectos</span>
+                    </h1>
+                    <p class="text-base sm:text-lg text-[#5C3D2E]/80 max-w-lg mx-auto lg:mx-0 leading-relaxed">
+                        En Sanser Bakery combinamos la calidez del sabor tradicional hecho en casa con la precisión de la ingeniería de calidad. Diseñado con pasión para paladares detallistas.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center lg:justify-start">
+                        <a href="#pedido" class="bg-[#E07A5F] text-white font-medium px-8 py-4 rounded-full shadow-xl shadow-[#E07A5F]/25 hover:bg-[#D0694D] transition-all flex items-center justify-center space-x-3 group">
+                            <span>Personalizar mi Postre</span>
+                            <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="#proceso" class="border-2 border-[#F4EBE1] hover:border-[#E07A5F] hover:bg-[#FFF] text-[#5C3D2E] font-medium px-8 py-4 rounded-full transition-all flex items-center justify-center space-x-2">
+                            <span>Conocer nuestro estándar</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Imagen del Producto Estrella -->
+                <div class="relative flex justify-center">
+                    <div class="absolute -top-4 -left-4 w-72 h-72 bg-[#FAF3EB] rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-pulse"></div>
+                    <div class="absolute -bottom-4 -right-4 w-72 h-72 bg-[#FFF3EE] rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-pulse"></div>
+                    
+                    <!-- Imagen enmarcada con diseño gourmet -->
+                    <div class="relative bg-white p-4 rounded-[2.5rem] shadow-2xl border border-[#F4EBE1] w-full max-w-sm sm:max-w-md">
+                        <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&q=80&w=800" 
+                             alt="Cheesecake de Fresa de Sanser Bakery" 
+                             onerror="this.src='https://placehold.co/600x600/f4ebe1/3d2c24?text=Cheesecake+de+Fresa'"
+                             class="rounded-[2rem] w-full h-[300px] sm:h-[380px] object-cover">
+                        <!-- Pequeño badge informativo de calidad -->
+                        <div class="absolute -bottom-2 -left-2 bg-white border border-[#F4EBE1] px-5 py-3 rounded-2xl shadow-xl flex items-center space-x-3">
+                            <span class="text-2xl">🍓</span>
+                            <div>
+                                <p class="text-xs font-bold text-[#E07A5F] uppercase tracking-wider">Lote Estrella</p>
+                                <p class="text-sm font-semibold text-[#3D2C24]">Cheesecake Premium</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: NUESTRO SELLO DE CALIDAD (BPM) -->
+    <section id="proceso" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-[#3D2C24]">
+                    ¿Por qué Sanser es <span class="text-[#E07A5F] italic">excepcional</span>?
+                </h2>
+                <p class="text-base sm:text-lg text-[#5C3D2E]/80">
+                    No solo cocinamos delicioso; aplicamos ingeniería y rigurosa estandarización para que cada bocado sea idéntico y perfecto.
+                </p>
+            </div>
+
+            <!-- Grid de Pilares de Calidad -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Pilar 1 -->
+                <div class="bg-[#FFFDFB] p-8 rounded-3xl border border-[#F4EBE1] hover:border-[#E07A5F]/40 transition-all hover:shadow-xl group space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-[#FFF3EE] flex items-center justify-center text-[#E07A5F] group-hover:bg-[#E07A5F] group-hover:text-white transition-all">
+                        <i data-lucide="scale" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-[#3D2C24]">Estandarización Absoluta</h3>
+                    <p class="text-sm text-[#5C3D2E]/80 leading-relaxed">
+                        Pesamos cada ingrediente en balanzas digitales de alta precisión. Cada postre sale exactamente con 1.5 kg, asegurando el mismo rendimiento y placer en tu mesa.
+                    </p>
+                </div>
+                <!-- Pilar 2 -->
+                <div class="bg-[#FFFDFB] p-8 rounded-3xl border border-[#F4EBE1] hover:border-[#E07A5F]/40 transition-all hover:shadow-xl group space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-[#FFF3EE] flex items-center justify-center text-[#E07A5F] group-hover:bg-[#E07A5F] group-hover:text-white transition-all">
+                        <i data-lucide="thermometer-snowflake" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-[#3D2C24]">Cadena de Frío Controlada</h3>
+                    <p class="text-sm text-[#5C3D2E]/80 leading-relaxed">
+                        Nuestras cheesecakes reposan bajo estrictos rangos de frío (por debajo de 5°C). Esto mantiene la estabilidad perfecta de la crema sin usar aditivos artificiales.
+                    </p>
+                </div>
+                <!-- Pilar 3 -->
+                <div class="bg-[#FFFDFB] p-8 rounded-3xl border border-[#F4EBE1] hover:border-[#E07A5F]/40 transition-all hover:shadow-xl group space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-[#FFF3EE] flex items-center justify-center text-[#E07A5F] group-hover:bg-[#E07A5F] group-hover:text-white transition-all">
+                        <i data-lucide="sparkles" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-[#3D2C24]">Frescura Justo a Tiempo</h3>
+                    <p class="text-sm text-[#5C3D2E]/80 leading-relaxed">
+                        Las fresas se desinfectan y cortan en el momento de la entrega para evitar su oxidación. Decoramos en lotes pequeños para garantizar brillo y frescura visual inmediata.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN INTERACTIVA: RECOMENDADOR DE MOMENTOS -->
+    <section id="recomendador" class="py-20 bg-[#FAF3EB]">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white p-8 sm:p-12 rounded-[2.5rem] shadow-xl border border-[#F4EBE1] space-y-8">
+                <div class="text-center space-y-3">
+                    <span class="text-xs font-bold uppercase tracking-widest text-[#E07A5F]">Asistente Inteligente</span>
+                    <h2 class="text-3xl font-serif font-bold text-[#3D2C24]">El Planificador de Momentos</h2>
+                    <p class="text-sm text-[#5C3D2E]/80">
+                        ¿No estás seguro de cuánta porción necesitas para tu evento? Nosotros calculamos la configuración ideal para ti.
+                    </p>
+                </div>
+
+                <!-- Formulario Interactivo -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="space-y-2">
+                        <label class="block text-sm font-semibold text-[#5C3D2E]">Número de Invitados</label>
+                        <select id="invitados-select" class="w-full px-4 py-3 rounded-xl border border-[#F4EBE1] bg-[#FFFDFB] focus:outline-none focus:border-[#E07A5F] transition-all">
+                            <option value="4">Pequeño (1-4 personas)</option>
+                            <option value="8" selected>Familiar (5-8 personas)</option>
+                            <option value="12">Celebración (9-12 personas)</option>
+                            <option value="20">Fiesta Grande (13-20 personas)</option>
+                        </select>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="block text-sm font-semibold text-[#5C3D2E]">Tipo de Ocasión</label>
+                        <select id="ocasion-select" class="w-full px-4 py-3 rounded-xl border border-[#F4EBE1] bg-[#FFFDFB] focus:outline-none focus:border-[#E07A5F] transition-all">
+                            <option value="Cena Especial" selected>Cena Familiar / Amigos</option>
+                            <option value="Cumpleaños">Celebración de Cumpleaños</option>
+                            <option value="Sorpresa">Regalo Sorpresa Especial</option>
+                            <option value="Corporativo">Reunión de Negocios / Oficina</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Resultado del Asistente -->
+                <div class="bg-[#FFFDFB] p-6 rounded-2xl border border-[#F4EBE1] flex flex-col sm:flex-row items-center justify-between gap-6">
+                    <div class="space-y-1 text-center sm:text-left">
+                        <p class="text-xs uppercase tracking-wider text-[#E07A5F] font-bold">Nuestra recomendación</p>
+                        <h4 id="recomendacion-titulo" class="text-lg font-bold text-[#3D2C24]">Cheesecake Mediana de 1.5 kg</h4>
+                        <p id="recomendacion-desc" class="text-xs text-[#5C3D2E]/80">Perfecto para una porción generosa de postre por persona.</p>
+                    </div>
+                    <button onclick="copiarRecomendacionAPedido()" class="w-full sm:w-auto bg-[#E07A5F] text-white font-medium px-6 py-3 rounded-xl hover:bg-[#D0694D] transition-all flex items-center justify-center space-x-2">
+                        <i data-lucide="check" class="w-4 h-4"></i>
+                        <span>Elegir esta Opción</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN INTERACTIVA: CONFIGURADOR DE PEDIDO (CALCULADOR) -->
+    <section id="pedido" class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Formulario del Pedido -->
+                <div class="space-y-6">
+                    <div class="space-y-2">
+                        <span class="text-xs font-bold uppercase tracking-widest text-[#E07A5F]">Pide Ahora</span>
+                        <h2 class="text-3xl font-serif font-bold text-[#3D2C24]">Configura tu Delicia</h2>
+                        <p class="text-sm text-[#5C3D2E]/80">
+                            Diseña tu Cheesecake a la medida y recíbela fresca directamente en tu casa.
+                        </p>
+                    </div>
+
+                    <!-- Paso 1: Tamaño -->
+                    <div class="space-y-3">
+                        <label class="block text-sm font-semibold text-[#5C3D2E]">1. Selecciona el Tamaño</label>
+                        <div class="grid grid-cols-3 gap-3">
+                            <button onclick="cambiarTamano('Pequeño', 15)" id="btn-tam-Pequeño" class="size-btn border-2 border-[#F4EBE1] p-3 rounded-2xl text-center hover:border-[#E07A5F] transition-all flex flex-col items-center">
+                                <span class="font-bold text-sm">Pequeño</span>
+                                <span class="text-xs text-[#5C3D2E]/75">15$</span>
+                            </button>
+                            <button onclick="cambiarTamano('Mediano', 25)" id="btn-tam-Mediano" class="size-btn border-2 border-[#E07A5F] bg-[#FFF3EE] p-3 rounded-2xl text-center transition-all flex flex-col items-center">
+                                <span class="font-bold text-sm">Mediano</span>
+                                <span class="text-xs text-[#E07A5F]">25$</span>
+                            </button>
+                            <button onclick="cambiarTamano('Grande', 35)" id="btn-tam-Grande" class="size-btn border-2 border-[#F4EBE1] p-3 rounded-2xl text-center hover:border-[#E07A5F] transition-all flex flex-col items-center">
+                                <span class="font-bold text-sm">Grande</span>
+                                <span class="text-xs text-[#5C3D2E]/75">35$</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Paso 2: Toppings -->
+                    <div class="space-y-3">
+                        <label class="block text-sm font-semibold text-[#5C3D2E]">2. Toppings Especiales</label>
+                        <div class="space-y-2">
+                            <label class="flex items-center justify-between p-3 rounded-xl border border-[#F4EBE1] cursor-pointer hover:bg-[#FFFDFB]">
+                                <div class="flex items-center space-x-3">
+                                    <input type="checkbox" id="topping-fresa" checked class="w-4 h-4 text-[#E07A5F] border-[#F4EBE1] rounded focus:ring-[#E07A5F]" onchange="calcularTotal()">
+                                    <span class="text-sm font-medium">Fresas Frescas Bañadas en Almíbar</span>
+                                </div>
+                                <span class="text-xs font-semibold text-[#E07A5F]">+2.00$</span>
+                            </label>
+                            <label class="flex items-center justify-between p-3 rounded-xl border border-[#F4EBE1] cursor-pointer hover:bg-[#FFFDFB]">
+                                <div class="flex items-center space-x-3">
+                                    <input type="checkbox" id="topping-chocolate" class="w-4 h-4 text-[#E07A5F] border-[#F4EBE1] rounded focus:ring-[#E07A5F]" onchange="calcularTotal()">
+                                    <span class="text-sm font-medium">Borde de Chocolate Blanco Artesanal</span>
+                                </div>
+                                <span class="text-xs font-semibold text-[#E07A5F]">+3.00$</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Paso 3: Detalles de entrega -->
+                    <div class="space-y-3">
+                        <label class="block text-sm font-semibold text-[#5C3D2E]">3. Detalles del Cliente</label>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <input type="text" id="nombre-input" placeholder="Nombre completo" class="w-full px-4 py-3 rounded-xl border border-[#F4EBE1] bg-[#FFFDFB] focus:outline-none focus:border-[#E07A5F] text-sm">
+                            <input type="text" id="direccion-input" placeholder="Zona de entrega en Caracas" class="w-full px-4 py-3 rounded-xl border border-[#F4EBE1] bg-[#FFFDFB] focus:outline-none focus:border-[#E07A5F] text-sm">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resumen de Pedido (Ticket de Compra) -->
+                <div class="bg-[#FFFDFB] p-8 rounded-3xl border border-[#F4EBE1] flex flex-col justify-between space-y-6 shadow-sm">
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-2 border-b border-[#F4EBE1] pb-4">
+                            <i data-lucide="shopping-bag" class="text-[#E07A5F] w-5 h-5"></i>
+                            <h3 class="font-bold text-lg text-[#3D2C24]">Detalle de tu Pedido</h3>
+                        </div>
+
+                        <!-- Lista de conceptos del ticket -->
+                        <div class="space-y-3 text-sm">
+                            <div class="flex justify-between">
+                                <span class="text-[#5C3D2E]/80">Tamaño: <strong id="resumen-tamano">Mediano</strong></span>
+                                <span id="resumen-precio-base" class="font-semibold">25.00$</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-[#5C3D2E]/80">Toppings e Extras</span>
+                                <span id="resumen-precio-toppings" class="font-semibold">2.00$</span>
+                            </div>
+                            <div class="flex justify-between border-t border-[#F4EBE1] pt-3">
+                                <span class="font-bold text-[#3D2C24]">Total Estimado</span>
+                                <span id="resumen-total" class="font-bold text-lg text-[#E07A5F]">27.00$</span>
+                            </div>
+                        </div>
+
+                        <!-- Nota de Calidad Garantizada -->
+                        <div class="bg-[#FFF3EE] p-4 rounded-xl border border-[#E07A5F]/20 flex items-start space-x-3">
+                            <i data-lucide="shield-check" class="text-[#E07A5F] w-5 h-5 flex-shrink-0 mt-0.5"></i>
+                            <p class="text-xs text-[#5C3D2E]/80 leading-relaxed">
+                                <strong>Compromiso Sanser:</strong> Si tu postre no llega en perfectas condiciones y con la temperatura adecuada de almacenamiento, te devolvemos el 100% de tu dinero.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Botón de Envío Directo a WhatsApp -->
+                    <button onclick="enviarPedidoPorWhatsApp()" class="w-full bg-[#E07A5F] text-white font-bold py-4 rounded-xl hover:bg-[#D0694D] transition-all flex items-center justify-center space-x-3 shadow-lg shadow-[#E07A5F]/20">
+                        <i data-lucide="message-square" class="w-5 h-5"></i>
+                        <span>Confirmar Pedido vía WhatsApp</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PIE DE PÁGINA (FOOTER) -->
+    <footer class="bg-[#3D2C24] text-[#FAF3EB]/90 py-12 border-t border-[#5C3D2E]">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b border-[#FAF3EB]/10">
+                <!-- Col 1: Marca -->
+                <div class="space-y-4">
+                    <span class="text-2xl font-serif font-bold text-white">Sanser <span class="text-[#E07A5F]">Bakery</span></span>
+                    <p class="text-sm text-[#FAF3EB]/70 leading-relaxed">
+                        Sabor excepcional con la rigurosidad y precisión técnica de la ingeniería repostera moderna. Entregas en toda el área metropolitana de Caracas.
+                    </p>
+                </div>
+                <!-- Col 2: Enlaces Rápidos -->
+                <div class="space-y-4">
+                    <h4 class="font-bold text-white text-sm uppercase tracking-widest">Secciones</h4>
+                    <div class="grid grid-cols-2 gap-2 text-sm">
+                        <a href="#inicio" class="hover:text-[#E07A5F] transition-colors">Inicio</a>
+                        <a href="#proceso" class="hover:text-[#E07A5F] transition-colors">Nuestro Sello</a>
+                        <a href="#recomendador" class="hover:text-[#E07A5F] transition-colors">Planificador</a>
+                        <a href="#pedido" class="hover:text-[#E07A5F] transition-colors">Hacer Pedido</a>
+                    </div>
+                </div>
+                <!-- Col 3: Contacto -->
+                <div class="space-y-4">
+                    <h4 class="font-bold text-white text-sm uppercase tracking-widest">Contacto Directo</h4>
+                    <p class="text-sm text-[#FAF3EB]/70">
+                        📍 Caracas, Venezuela <br>
+                        📞 WhatsApp: +58 424-1362106 <br>
+                        📧 contacto@Sanserbakery.com
+                    </p>
+                </div>
+            </div>
+            <!-- Derechos Reservados -->
+            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-[#FAF3EB]/50">
+                <p>&copy; 2026 Sanser Bakery. Todos los derechos reservados.</p>
+                <p>Hecho con amor y precisión en Caracas.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LÓGICA DE INTERACCIÓN DEL SITIO WEB -->
+    <script>
+        // Inicializar los iconos de Lucide
+        lucide.createIcons();
+
+        // Control del menú móvil desplegable
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Configuración inicial del cotizador interactivo
+        let tamanoSeleccionado = 'Mediano';
+        let precioBase = 25;
+
+        // Cambiar tamaño del postre
+        function cambiarTamano(tamano, precio) {
+            tamanoSeleccionado = tamano;
+            precioBase = precio;
+
+            // Limpiar estilos activos de todos los botones de tamaño
+            document.querySelectorAll('.size-btn').forEach(btn => {
+                btn.classList.remove('border-[#E07A5F]', 'bg-[#FFF3EE]');
+                btn.classList.add('border-[#F4EBE1]');
+            });
+
+            // Activar botón seleccionado
+            const activeBtn = document.getElementById(`btn-tam-${tamano}`);
+            activeBtn.classList.remove('border-[#F4EBE1]');
+            activeBtn.classList.add('border-[#E07A5F]', 'bg-[#FFF3EE]');
+
+            // Actualizar textos en el ticket
+            document.getElementById('resumen-tamano').textContent = tamano;
+            document.getElementById('resumen-precio-base').textContent = `${precio.toFixed(2)}$`;
+
+            calcularTotal();
+        }
+
+        // Calcular costo total del pedido
+        function calcularTotal() {
+            let precioToppings = 0;
+
+            if (document.getElementById('topping-fresa').checked) {
+                precioToppings += 2.00;
+            }
+            if (document.getElementById('topping-chocolate').checked) {
+                precioToppings += 3.00;
+            }
+
+            const total = precioBase + precioToppings;
+
+            document.getElementById('resumen-precio-toppings').textContent = `${precioToppings.toFixed(2)}$`;
+            document.getElementById('resumen-total').textContent = `${total.toFixed(2)}$`;
+        }
+
+        // Recomendador automático según invitados y ocasión
+        const invitadosSelect = document.getElementById('invitados-select');
+        const ocasionSelect = document.getElementById('ocasion-select');
+
+        function actualizarRecomendacion() {
+            const invitados = parseInt(invitadosSelect.value);
+            const ocasion = ocasionSelect.value;
+
+            let titulo = '';
+            let desc = '';
+
+            if (invitados <= 4) {
+                titulo = 'Cheesecake Pequeño de 1.0 kg';
+                desc = 'Ideal para compartir en una velada íntima sin dejar sobrantes.';
+            } else if (invitados <= 8) {
+                titulo = 'Cheesecake Mediano de 1.5 kg (Lote #004)';
+                desc = 'Nuestro formato estándar estrella. Ideal para deleitar a toda la familia.';
+            } else {
+                titulo = 'Cheesecake Grande de 2.2 kg';
+                desc = 'Perfecto para fiestas o cumpleaños, rinde generosas porciones para todos.';
+            }
+
+            document.getElementById('recomendacion-titulo').textContent = titulo;
+            document.getElementById('recomendacion-desc').textContent = `${desc} Configurado especialmente para: ${ocasion}.`;
+        }
+
+        invitadosSelect.addEventListener('change', actualizarRecomendacion);
+        ocasionSelect.addEventListener('change', actualizarRecomendacion);
+
+        // Copiar la recomendación seleccionada directamente al configurador de compra
+        function copiarRecomendacionAPedido() {
+            const invitados = parseInt(invitadosSelect.value);
+            
+            if (invitados <= 4) {
+                cambiarTamano('Pequeño', 15);
+            } else if (invitados <= 8) {
+                cambiarTamano('Mediano', 25);
+            } else {
+                cambiarTamano('Grande', 35);
+            }
+
+            // Desplazar suavemente a la sección de pedido
+            document.getElementById('pedido').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Redirigir el pedido a WhatsApp con plantilla de texto estructurada
+        function enviarPedidoPorWhatsApp() {
+            const nombre = document.getElementById('nombre-input').value.trim() || 'Cliente Detallista';
+            const direccion = document.getElementById('direccion-input').value.trim() || 'Retira en tienda (Caracas)';
+            const total = document.getElementById('resumen-total').textContent;
+            
+            let toppings = [];
+            if (document.getElementById('topping-fresa').checked) toppings.push('🍓 Fresas en almíbar');
+            if (document.getElementById('topping-chocolate').checked) toppings.push('🍫 Borde de Chocolate Blanco');
+            if (toppings.length === 0) toppings.push('Ninguno (Solo receta clásica)');
+
+            // Crear plantilla de mensaje amigable y lista para procesar en cocina
+            const textoMensaje = `¡Hola Sanser Bakery! 🍓\n\nQuiero confirmar un pedido de Cheesecake con las siguientes especificaciones:\n\n👤 *Nombre:* ${nombre}\n📍 *Zona:* ${direccion}\n🧁 *Tamaño:* ${tamanoSeleccionado}\n✨ *Adicionales:* ${toppings.join(', ')}\n💵 *Total estimado:* ${total}\n\n_¡Espero con ansias probar la consistencia perfecta de Sanser!_`;
+
+            // Construir enlace de WhatsApp con formato de texto seguro
+            const urlWhatsApp = `https://wa.me/584241362106?text=${encodeURIComponent(textoMensaje)}`;
+
+            // Abrir en pestaña nueva de forma segura
+            window.open(urlWhatsApp, '_blank');
+        }
+    </script>
+</body>
+</html>
