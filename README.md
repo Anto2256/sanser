@@ -1,6 +1,6 @@
 # 🥖 Sanser Bakery — Sitio Web Oficial
 
-¡Bienvenido al repositorio oficial del sitio web de **Sansrt Bakery**! Este proyecto contiene la plataforma web de la panadería y repostería artesanal, diseñada para ofrecer una experiencia visual cálida, optimizada para motores de búsqueda (SEO) y lista para la captación y gestión de pedidos de clientes.
+¡Bienvenido al repositorio oficial del sitio web de **Sanser Bakery**! Este proyecto contiene la plataforma web de la panadería y repostería artesanal, diseñada para ofrecer una experiencia visual cálida, optimizada para motores de búsqueda (SEO) y lista para la captación y gestión de pedidos de clientes.
 
 ---
 
