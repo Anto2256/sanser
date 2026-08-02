@@ -1,4 +1,4 @@
-# 🥖 Sansrt Bakery — Sitio Web Oficial
+# 🥖 Sanser Bakery — Sitio Web Oficial
 
 ¡Bienvenido al repositorio oficial del sitio web de **Sansrt Bakery**! Este proyecto contiene la plataforma web de la panadería y repostería artesanal, diseñada para ofrecer una experiencia visual cálida, optimizada para motores de búsqueda (SEO) y lista para la captación y gestión de pedidos de clientes.
 
@@ -17,7 +17,7 @@
 
 ## 🥐 Acerca del Proyecto
 
-**Sansrt Bakery** es una marca de repostería y panadería boutique enfocada en la elaboración de productos artesanales con ingredientes seleccionados de alta calidad (panes de masa madre, cheesecakes, postres gourmet y pedidos personalizados). 
+**Sanser Bakery** es una marca de repostería y panadería boutique enfocada en la elaboración de productos artesanales con ingredientes seleccionados de alta calidad (panes de masa madre, cheesecakes, postres gourmet y pedidos personalizados). 
 
 Este sitio web busca transmitir la calidez del taller artesanal en el entorno digital, integrando herramientas de conversión, optimización SEO local y flujos automatizados de e-mail marketing.
 
